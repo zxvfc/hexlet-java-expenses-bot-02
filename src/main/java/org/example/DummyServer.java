@@ -8,6 +8,7 @@ import java.net.InetSocketAddress;
 
 public class DummyServer {
     public static void startServer() throws IOException {
+        System.out.println("Starting dummy server at: " + getServerPort());
         HttpServer server = HttpServer.create(
                 new InetSocketAddress(getServerPort()),
                 0

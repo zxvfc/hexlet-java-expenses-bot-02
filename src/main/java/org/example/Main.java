@@ -11,6 +11,8 @@ public class Main {
         DummyServer.startServer();
         TelegramBot telegramBot = new TelegramBot();
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
+
+        System.out.println("Starting bot with token: " + telegramBot.getBotToken());
         telegramBotsApi.registerBot(telegramBot);
     }
 }
